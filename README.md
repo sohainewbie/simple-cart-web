@@ -45,7 +45,9 @@ INSERT INTO products SET skuNo='234234', name='Raspberry Pi B', price=30, invent
 ```
 
 ```
-curl http://localhost:8000/products
+curl http://localhost:8001/products
+
+response:
 {
 	"status": 200,
 	"message": "success",
@@ -74,7 +76,9 @@ curl http://localhost:8000/products
 ```
 
 ```
-curl -X POST -d 'skuNo=12OP9011&qty=1' http://localhost:8000/add-to-cart
+curl -X POST -d 'skuNo=12OP90&qty=1' http://localhost:8001/add-to-cart
+
+response:
 {
 	"status": 200,
 	"message": "success"
@@ -82,7 +86,9 @@ curl -X POST -d 'skuNo=12OP9011&qty=1' http://localhost:8000/add-to-cart
 ```
 
 ```
-curl http://localhost:8000/list-cart
+curl http://localhost:8001/list-cart
+
+response:
 {
 	"status": 200,
 	"message": "success",
